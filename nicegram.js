@@ -1,4 +1,6 @@
 $response.status=200;
 $response.body={"data": {"premiumAccess": true}};
-const resp = $response;
+const resp ={};
+resp.headers =$response.headers;
+resp.body =$response.body;
 $done(resp);

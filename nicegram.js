@@ -1,8 +1,5 @@
-var resp ={};
-resp.headers =$response.headers;
-resp.body =$response.body;
-resp.status=200;
-console.log(resp.headers);
-console.log(resp.status);
-resp.body={"data": {"premiumAccess": true}};
-$done(resp);
+var modifiedHeaders = $response.headers;
+var modifiedStatus = 'HTTP/1.1 200 OK';
+var body1={"data": {"premiumAccess": true}};
+
+$done({status: modifiedStatus, headers : modifiedHeaders, body : body1});
